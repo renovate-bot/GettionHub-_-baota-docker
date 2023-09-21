@@ -44,7 +44,7 @@ jobs:
           file: clear/Dockerfile
           push: true
           tags: |
-            ${{ secrets.DOCKERHUB_USERNAME }}/baota-docker:clear
+            gettionhub/baota-docker:clear
         continue-on-error: true
 
   Baota-docker_ln_image_Build:
@@ -80,7 +80,7 @@ jobs:
           file: ln/Dockerfile
           push: true
           tags: |
-            ${{ secrets.DOCKERHUB_USERNAME }}/baota-docker:ln
+            gettionhub/baota-docker:ln
         continue-on-error: true
 
   Baota-docker_lnp_image_Build:
@@ -116,7 +116,7 @@ jobs:
           file: lnp/Dockerfile
           push: true
           tags: |
-            ${{ secrets.DOCKERHUB_USERNAME }}/baota-docker:lnp
+            gettionhub/baota-docker:lnp
         continue-on-error: true
 
   Baota-docker_lnmp_image_Build:
@@ -152,5 +152,5 @@ jobs:
           file: lnmp/Dockerfile
           push: true
           tags: |
-            ${{ secrets.DOCKERHUB_USERNAME }}/baota-docker:lnmp
+            gettionhub/baota-docker:lnmp
         continue-on-error: true
