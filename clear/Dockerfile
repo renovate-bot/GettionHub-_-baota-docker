@@ -20,7 +20,7 @@ RUN cd /code \
     && wget -O install.sh http://download.bt.cn/install/install_6.0.sh \
     && sed -i 's/8888/8888/g' install.sh \
     && echo y | bash install.sh \
-    && curl -sL http://download.bt.cn/install/update6.sh \
+    && curl -sL http://download.bt.cn/install/update6.sh|sed 's/version=.*/version=7.7.0/g'|bash \
     && python install_plugin.py "ip_configuration,score,webssh,firewall,boot,linuxsys,supervisor,webshell_check,clear,webhook,msonedrive,psync_api,gdrive,qiniu,txcos,backup" \
     && echo '["firewall", "boot", "linuxsys", "supervisor", "webshell_check", "clear", "webhook", "msonedrive", "ip_configuration", "score", "webssh"]' > /www/server/panel/config/index.json \
     && python set_default.py \
